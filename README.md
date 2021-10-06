@@ -22,4 +22,8 @@ LD_PRELOAD=build/libmutexerrchkenforcer.so /path/to/my/program-to-test
 This wrapper changes the mutex-type in place before doing a regular mutex lock.
 
 
+# code quality
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/folkertvanheusden/MutexErrChkEnforcer.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/folkertvanheusden/MutexErrChkEnforcer/alerts/)
+
+
 written by folkert@vanheusden.com
