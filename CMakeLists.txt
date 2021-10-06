@@ -11,6 +11,10 @@ add_library(mutexerrchkenforcer SHARED
 	mutexerrchkenforcer.c
 	)
 
+add_executable(mutexspeedtext
+	speedtest.c
+	)
+
 target_compile_features(mutexerrchkenforcer PUBLIC c_std_99)
 
 set(CMAKE_THREAD_PREFER_PTHREAD TRUE)

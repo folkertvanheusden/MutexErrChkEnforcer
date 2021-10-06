@@ -21,6 +21,8 @@ LD_PRELOAD=build/libmutexerrchkenforcer.so /path/to/my/program-to-test
 # note
 This wrapper changes the mutex-type in place before doing a regular mutex lock.
 
+speedtest.c compares the performance of each mutex type.
+
 
 # code quality
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/folkertvanheusden/MutexErrChkEnforcer.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/folkertvanheusden/MutexErrChkEnforcer/alerts/)
