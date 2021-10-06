@@ -16,7 +16,7 @@ int pthread_mutex_lock(pthread_mutex_t *mutex)
 	if (!org_pthread_mutex_lock_h)
 		org_pthread_mutex_lock_h = (org_pthread_mutex_lock)dlsym(RTLD_NEXT, "pthread_mutex_lock");
 
-	if (mutex->__data.__kind == PTHREAD_MUTEX_NORMAL)
+	if (mutex->__data.__kind == PTHREAD_MUTEX_NORMAL || mutex->__data.__kind == PTHREAD_MUTEX_ADAPTIVE_NP)
 		mutex->__data.__kind = PTHREAD_MUTEX_ERRORCHECK;
 
 	int rc = (*org_pthread_mutex_lock_h)(mutex);
