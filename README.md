@@ -1,6 +1,8 @@
 # MutexErrChkEnforcer
 This forces every pthread mutex to be an error-checking mutex so to track bugs.
 
+To enable this for 'recursive' mutexes, set the RECURSIVE environment variable before using the wrapper.
+
 
 # building
 * mkdir build
