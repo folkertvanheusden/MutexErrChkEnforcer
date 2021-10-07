@@ -41,5 +41,10 @@ int pthread_mutex_lock(pthread_mutex_t *mutex)
 
 void __attribute__ ((constructor)) init()
 {
+	fprintf(stderr, " * mutexerrchkenforcer enabled *\n");
+
 	modify_recursive = getenv("RECURSIVE") != NULL;
+
+	if (modify_recursive)
+		fprintf(stderr, " * also recursive mutexes will be modified *\n");
 }
